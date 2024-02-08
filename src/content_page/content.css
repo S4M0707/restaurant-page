@@ -1,0 +1,73 @@
+:root {
+    --color1: #9A031E;
+    --color2: #E36414;
+    --color3: #FB8B24;
+    --color4: #5F0F40;
+}
+
+.info {
+    width: min(90%, 60vw + 10rem);
+    height: fit-content;
+    margin: 4%;
+    padding: 2%;
+    border-radius: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-image: url(./images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color4);
+
+    font-size: calc(1rem + 0.3vw);
+}
+
+.info>h1 {
+    grid-row: 1 / 2;
+    font-size: calc(2rem + 1vw);
+    margin: 1rem;
+}
+
+.info h2 {
+    font-size: calc(1rem + 1vw);;
+}
+
+#s1 {
+    grid-row: 2 / 3;
+    margin-left: 1rem;
+}
+
+#s2 {
+    grid-row: 3 / 4;
+    margin-left: 1rem;
+}
+
+.info>.imageContainer {
+    grid-row: 1 / 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.info>.imageContainer>img {
+    position: relative;
+    height: calc(5rem + 12vw);
+    width: auto;
+    border: solid var(--color4) 0.1rem;
+}
+
+.info>.imageContainer>.food {
+    left: 5rem;
+}
+
+.info>.imageContainer>.pancake {
+    top: -2rem;
+    left: -5rem;
+    border-radius: 35% 35% 0 0;
+}
