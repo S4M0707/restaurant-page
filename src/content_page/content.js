@@ -2,7 +2,7 @@ import './content.css';
 import FoodImg from './images/food.jpg';
 import Pancake from './images/pancake.jpg';
 
-export function createInfo() {
+export function createHome() {
     const info = document.createElement('div');
     info.classList.add('info');
 
@@ -65,7 +65,7 @@ function createCard(name, para) {
     return card;
 }
 
-export function createContainer() {
+export function createMenu() {
     const container = document.createElement('container');
     container.classList.add('container');
 
