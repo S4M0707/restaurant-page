@@ -1,4 +1,4 @@
-import { createHome, createMenu } from './content_page/content'
+import { createHome, createMenu, createAbout } from './content_page/content'
 import './index.css';
 
 (function() {
@@ -23,6 +23,8 @@ import './index.css';
             content.appendChild(createHome());
         if (id === 'menu')
             content.appendChild(createMenu());
+        if (id === 'about')
+            content.appendChild(createAbout());
     }
 
     home.addEventListener('click', selection);

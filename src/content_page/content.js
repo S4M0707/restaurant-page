@@ -66,7 +66,7 @@ function createCard(name, para) {
 }
 
 export function createMenu() {
-    const container = document.createElement('container');
+    const container = document.createElement('div');
     container.classList.add('container');
 
     const h1 = document.createElement('h1');
@@ -75,7 +75,7 @@ export function createMenu() {
     const p = document.createElement('p');
     p.textContent = 'Multi-cuisine meals, imported wines & sweetmeat — everything is served by our cordial staff.';
 
-    const cardContainer = document.createElement('cardContainer');
+    const cardContainer = document.createElement('div');
     cardContainer.classList.add('cardContainer');
 
     let name = 'food';
@@ -90,11 +90,39 @@ export function createMenu() {
     para = 'Savour our expertly crafted drinks from around the world.';
     cardContainer.appendChild(createCard(name, para));
 
+    const bookTable = document.createElement('button');
+    bookTable.classList.add('bookTable');
+    bookTable.innerText = 'Book Table';
+
     container.appendChild(h1);
     container.appendChild(p);
     container.appendChild(cardContainer);
+    container.appendChild(bookTable);
 
     return container;
+}
+
+export function createAbout() {
+    const section = document.createElement('section');
+    section.classList.add('about-section');
+
+    const p1 = document.createElement('p');
+    p1.textContent = 'Welcome to Our Restaurant! We are dedicated to serving delicious and authentic cuisine in a warm and inviting atmosphere.';
+    section.appendChild(p1);
+
+    const p2 = document.createElement('p');
+    p2.textContent = 'Our culinary team is passionate about using fresh, locally-sourced ingredients to create mouthwatering dishes that will tantalize your taste buds.';
+    section.appendChild(p2);
+
+    const p3 = document.createElement('p');
+    p3.textContent = "Whether you're joining us for a casual meal with friends or a special celebration with loved ones, we strive to provide exceptional service and an unforgettable dining experience.";
+    section.appendChild(p3);
+
+    const p4 = document.createElement('p');
+    p4.textContent = "Come visit us today and discover why Our Restaurant is the perfect destination for food lovers!";
+    section.appendChild(p4);
+
+    return section;
 }
 
 /*
@@ -141,4 +169,11 @@ export function createMenu() {
         </div>
     </div>
 </div>
+<section class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to Our Restaurant! We are dedicated to serving delicious and authentic cuisine in a warm and inviting atmosphere.</p>
+    <p>Our culinary team is passionate about using fresh, locally-sourced ingredients to create mouthwatering dishes that will tantalize your taste buds.</p>
+    <p>Whether you're joining us for a casual meal with friends or a special celebration with loved ones, we strive to provide exceptional service and an unforgettable dining experience.</p>
+    <p>Come visit us today and discover why Our Restaurant is the perfect destination for food lovers!</p>
+</section>
 */
